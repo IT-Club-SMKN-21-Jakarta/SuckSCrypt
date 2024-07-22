@@ -13,7 +13,7 @@ pip install SuckSCrypt
 ## Example Uses
 
 ```python
-rom suckscrypt.core import generate_key, sucks_encrypt, sucks_decrypt
+from suckscrypt.core import generate_key, sucks_encrypt, sucks_decrypt
 
 # generate keyy and salt
 key, salt = generate_key()
