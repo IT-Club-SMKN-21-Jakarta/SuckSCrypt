@@ -13,18 +13,19 @@ pip install SuckSCrypt
 ## Example Uses
 
 ```python
-from suckscrypt import core
+rom suckscrypt.core import generate_key, sucks_encrypt, sucks_decrypt
 
-# Example usage of the SuckSCrypt
-key, salt = core.generate_key()
-plaintext = b'Wow, SuckSCrypt is very Secure.'
+# generate keyy and salt
+key, salt = generate_key()
 
-# Enc
-encrypted_text = core.sucks_encrypt(key, plaintext)
-print(f'Encrypted text: {encrypted_text.hex()}')
+# enc
+plaintext = b'Wow, SuckSCrypt is very secure.'
+encrypted_text = sucks_encrypt(key, plaintext)
 
-# Dec
-decrypted_text = core.sucks_decrypt(key, encrypted_text)
+# dec
+decrypted_text = sucks_decrypt(key, encrypted_text)
+
+print(f'Encrypted text (hex): {encrypted_text.hex()[:20]}...')
 print(f'Decrypted text: {decrypted_text.decode()}')
 ```
 
