@@ -1,6 +1,6 @@
 # tests/test_core.py
 import unittest
-from core import generate_key, sucks_encrypt, sucks_decrypt
+from suckscrypt.core import generate_key, sucks_encrypt, sucks_decrypt
 
 class TestSuckSCrypt(unittest.TestCase):
     def setUp(self):
